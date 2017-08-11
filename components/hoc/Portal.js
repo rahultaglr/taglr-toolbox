@@ -35,7 +35,7 @@ class Portal extends Component {
 
   _mountOverlayTarget () {
     if (!this._overlayTarget) {
-      this._overlayTarget = document.createElement('div');
+      this._overlayTarget = document.createElement('span');
       this._portalContainerNode = getContainer(this.props.container);
       this._portalContainerNode.appendChild(this._overlayTarget);
     }
