@@ -1,6 +1,10 @@
 {
   "name": "taglr-toolbox",
   "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rahultaglr/taglr-toolbox.git"
+  },
   "description": "React toolbox variant with minor changes in components. 1.3.4 version",
   "dependencies": {
     "classnames": "^2.2.5",
