@@ -1,6 +1,6 @@
 {
   "name": "taglr-toolbox",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rahultaglr/taglr-toolbox.git"
@@ -11,7 +11,6 @@
     "core-js": "^2.4.0",
     "immutability-helper": "^2.0.0",
     "normalize.css": "^4.2.0",
-    "react": "^15.5.4",
     "react-css-themr": "^1.7.1"
   },
   "devDependencies": {
@@ -52,7 +51,7 @@
     "phantomjs-prebuilt": "^2.1.14",
     "postcss-loader": "^1.2.1",
     "pre-commit": "^1.2.2",
-    "react": "^15.4.1",
+    "react": "15.4.1",
     "react-addons-css-transition-group": "^15.4.1",
     "react-addons-test-utils": "^15.4.1",
     "react-dom": "^15.4.1",
