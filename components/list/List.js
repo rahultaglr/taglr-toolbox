@@ -33,7 +33,8 @@ const factory = (ListItem) => {
         if (item.type === ListItem) {
           const selectable = mergeProp('selectable', item.props, this.props);
           const ripple = mergeProp('ripple', item.props, this.props);
-          return React.cloneElement(item, { selectable, ripple });
+          const disableTouchRipple = mergeProp('disableTouchRipple', item.props, this.props);
+          return React.cloneElement(item, { selectable, ripple, disableTouchRipple });
         } else {
           return React.cloneElement(item);
         }

@@ -216,7 +216,9 @@ const rippleFactory = (options = {}) => {
         if (this.props.onTouchStart) this.props.onTouchStart(event);
         if (!this.props.disabled) {
           const { x, y } = events.getTouchPosition(event);
-          this.animateRipple(x, y, true);
+          if (!this.props.disableTouchRipple) {
+            this.animateRipple(x, y, true);  // TJ-3195 fix
+          }
         }
       };
 

@@ -46,7 +46,7 @@ const factory = (ripple, FontIcon) => {
 
     render () {
       const {accent, children, className, href, icon, inverse, neutral,
-        primary, theme, type, ...others} = this.props;
+        primary, theme, type, disableTouchRipple, ...others} = this.props;
       const element = href ? 'a' : 'button';
       const level = primary ? 'primary' : accent ? 'accent' : 'neutral';
       const classes = classnames([theme.toggle], {
