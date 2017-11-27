@@ -18,6 +18,7 @@ const factory = (Radio) => {
       ]),
       name: PropTypes.string,
       onBlur: PropTypes.func,
+      onClick: PropTypes.func,
       onChange: PropTypes.func,
       onFocus: PropTypes.func,
       onMouseEnter: PropTypes.func,
@@ -38,9 +39,10 @@ const factory = (Radio) => {
     };
 
     handleClick = (event) => {
-      const {checked, disabled, onChange} = this.props;
+      const {checked, disabled, onChange, onClick} = this.props;
       if (event.pageX !== 0 && event.pageY !== 0) this.blur();
       if (!disabled && !checked && onChange) onChange(event, this);
+      else onClick();
     };
 
     blur () {
