@@ -21,6 +21,10 @@
   }
 }
 
+@media (min-width: 740px){
+  .overlay{  justify-content:center; }
+}
+
 .backdrop {
   position: absolute;
   top: 0;
