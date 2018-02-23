@@ -42,7 +42,7 @@ const factory = (Radio) => {
       const {checked, disabled, onChange, onClick} = this.props;
       if (event.pageX !== 0 && event.pageY !== 0) this.blur();
       if (!disabled && !checked && onChange) onChange(event, this);
-      else onClick();
+      else if(onClick) onClick();
     };
 
     blur () {
