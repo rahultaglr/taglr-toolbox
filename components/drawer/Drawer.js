@@ -32,9 +32,10 @@ const factory = (Overlay) => {
       content: PropTypes.string,
       drawer: PropTypes.string,
       left: PropTypes.string,
-      right: PropTypes.string
+      right: PropTypes.string,
+      bottom: PropTypes.string
     }),
-    type: PropTypes.oneOf(['left', 'right'])
+    type: PropTypes.oneOf(['left', 'right', 'bottom'])
   };
 
   Drawer.defaultProps = {

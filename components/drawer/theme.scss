@@ -24,7 +24,12 @@
   &.active {
     pointer-events: all;
     transition-delay: $animation-delay;
-    transform: translateX(0);
+    &:not(.bottom) {
+      transform: translateX(0);
+    }
+    &.bottom {
+      transform: translateY(0);
+    }
   }
   &.right {
     right: 0;
@@ -38,6 +43,13 @@
     border-right: 1px solid $drawer-border-color;
     &:not(.active) {
       transform: translateX(- 100%);
+    }
+  }
+  &.bottom {
+    left: 0;
+    border-right: 1px solid $drawer-border-color;
+    &:not(.active) {
+      transform: translateY(100%);
     }
   }
 }
