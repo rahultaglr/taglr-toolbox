@@ -17,6 +17,7 @@ const factory = (Input, DatePickerDialog) => {
       active: PropTypes.bool,
       autoOk: PropTypes.bool,
       cancelLabel: PropTypes.string,
+      cancelRippleSpread: PropTypes.number,
       className: PropTypes.string,
       disabledDates: React.PropTypes.array,
       enabledDates: React.PropTypes.array,
@@ -36,6 +37,7 @@ const factory = (Input, DatePickerDialog) => {
       minDate: PropTypes.object,
       name: PropTypes.string,
       okLabel: PropTypes.string,
+      okRippleSpread: PropTypes.number,
       onChange: PropTypes.func,
       onClick: PropTypes.func,
       onDismiss: PropTypes.func,
@@ -145,6 +147,8 @@ const factory = (Input, DatePickerDialog) => {
             name={this.props.name}
             onDismiss={this.handleDismiss}
             okLabel={okLabel}
+            cancelRippleSpread={this.props.cancelRippleSpread}
+            okRippleSpread={this.props.okRippleSpread}
             onEscKeyDown={onEscKeyDown || this.handleDismiss}
             onOverlayClick={onOverlayClick || this.handleDismiss}
             onSelect={this.handleSelect}

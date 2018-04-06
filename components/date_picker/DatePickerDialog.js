@@ -8,6 +8,7 @@ const factory = (Dialog, Calendar) => {
       active: PropTypes.bool,
       autoOk: PropTypes.bool,
       cancelLabel: PropTypes.string,
+      cancelRippleSpread: PropTypes.number,
       className: PropTypes.string,
       disabledDates: PropTypes.array,
       enabledDates: PropTypes.array,
@@ -19,6 +20,7 @@ const factory = (Dialog, Calendar) => {
       minDate: PropTypes.object,
       name: PropTypes.string,
       okLabel: PropTypes.string,
+      okRippleSpread: PropTypes.number,
       onDismiss: PropTypes.func,
       onEscKeyDown: PropTypes.func,
       onOverlayClick: PropTypes.func,
@@ -42,7 +44,9 @@ const factory = (Dialog, Calendar) => {
       cancelLabel: 'Cancel',
       className: '',
       okLabel: 'Ok',
-      value: new Date()
+      value: new Date(),
+      cancelRippleSpread: 2,
+      okRippleSpread: 2
     };
 
     state = {
@@ -88,8 +92,8 @@ const factory = (Dialog, Calendar) => {
     };
 
     actions = [
-      { label: this.props.cancelLabel, className: this.props.theme.button, onClick: this.props.onDismiss },
-      { label: this.props.okLabel, className: this.props.theme.button, name: this.props.name, onClick: this.handleSelect }
+      { label: this.props.cancelLabel, className: this.props.theme.button, onClick: this.props.onDismiss, rippleSpread: this.props.cancelRippleSpread },
+      { label: this.props.okLabel, className: this.props.theme.button, name: this.props.name, onClick: this.handleSelect, rippleSpread: this.props.okRippleSpread }
     ];
 
     render () {
