@@ -28,12 +28,19 @@ class Overlay extends Component {
     if (this.props.active) {
       document.body.addEventListener('keydown', this.handleEscKey);
       document.body.style.overflow = 'hidden';
+      document.body.style.position = 'fixed';
     }
   }
 
   componentWillUpdate (nextProps) {
-    if (nextProps.active && !this.props.active) document.body.style.overflow = 'hidden';
-    if (!nextProps.active && this.props.active && !document.querySelectorAll('[data-react-toolbox="overlay"]')[1]) document.body.style.overflow = '';
+    if (nextProps.active && !this.props.active) {
+      document.body.style.overflow = 'hidden';
+      document.body.style.position = 'fixed';
+    }
+    if (!nextProps.active && this.props.active && !document.querySelectorAll('[data-react-toolbox="overlay"]')[1]) {
+      document.body.style.overflow = '';
+      document.body.style.position = '';
+    }
   }
 
   componentDidUpdate () {
@@ -43,7 +50,10 @@ class Overlay extends Component {
   }
 
   componentWillUnmount () {
-    if (!document.querySelectorAll('[data-react-toolbox="overlay"]')[1]) document.body.style.overflow = '';
+    if (!document.querySelectorAll('[data-react-toolbox="overlay"]')[1]) {
+      document.body.style.overflow = '';
+      document.body.style.position = '';
+    }
     document.body.removeEventListener('keydown', this.handleEscKey);
   }
 
