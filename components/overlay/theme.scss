@@ -14,16 +14,13 @@
   flex-direction: column;
   align-content: center;
   align-items: center;
-  justify-content:flex-end;
+  justify-content:center;
   pointer-events: none;
   &.invisible > *:not(.backdrop) {
     pointer-events: all;
   }
 }
 
-@media (min-width: 740px){
-  .overlay{  justify-content:center; }
-}
 
 .backdrop {
   position: absolute;
